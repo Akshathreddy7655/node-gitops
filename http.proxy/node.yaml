@@ -1,0 +1,29 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: node
+spec:
+  routes:
+    - conditions:
+        - prefix: /
+      services:
+        - name: node
+          port: 80
+  virtualhost:
+    corsPolicy:
+      allowCredentials: true
+      allowHeaders:
+        - '*'
+      allowMethods:
+        - GET
+        - POST
+        - OPTIONS
+      allowOrigin:
+        - '*'
+      exposeHeaders:
+        - Content-Length
+        - Content-Range
+      maxAge: 10m
+    fqdn: nodetest.mediacloud.ga
+    tls:
+      secretName: node

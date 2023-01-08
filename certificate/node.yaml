@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: node
+spec:
+  commonName: nodetest.mediacloud.ga
+  dnsNames:
+    - nodetest.mediacloud.ga
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-prod
+  secretName: node
