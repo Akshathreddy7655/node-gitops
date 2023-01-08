@@ -16,6 +16,6 @@ spec:
         path: /
         backend:
           service:
-            name: httpbin
+            name: node
             port:
               number: 80
