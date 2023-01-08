@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: node
-        image: 741053355470.dkr.ecr.ap-south-1.amazonaws.com/demo:main-fe4e2e8bb7e0c511f4d54d1263ebb64e63ce8791
+        image: 741053355470.dkr.ecr.ap-south-1.amazonaws.com/demo:main-c50158a8c248b976289551556d53d0ff2c3cc7b4
         ports:
         - containerPort: 8080
